@@ -1,12 +1,13 @@
 import React from 'react';
 
-function startCard() {
+import TextCard from '../components/TextCard';
+import Portrait from '../components/Portrait'
+
+function MainInfo() {
   return (
-    <div className="start-card">
-      <div>
-        <h2>Whats in a</h2>
-        <h1>Website?</h1>
-      </div>
+    <div className="main-info">
+      <Portrait />
+      <TextCard text="Tim Maaßen" />
       <svg xmlns="http://www.w3.org/2000/svg" display="none">
         <filter id="squiggle">
           <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" result="turbulence"> 
@@ -19,4 +20,4 @@ function startCard() {
   );
 }
 
-export default startCard;
+export default MainInfo;
