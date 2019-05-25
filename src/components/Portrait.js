@@ -1,12 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function MainInfo() {
-
-  const imageSizeInPx = 100;
-
+export default function Portrait({ imageSizeInPx }) {
   return (
-    <img className="portrait" src="/img/portrait.png" alt="Portrait" style={{ borderRadius: imageSizeInPx / 2 + "px" }} />
+    <img className="portrait" src="/img/portrait.png" alt="Portrait" height={imageSizeInPx} width={imageSizeInPx} style={{ borderRadius: imageSizeInPx / 2 + "px" }} />
   );
 }
 
-export default MainInfo;
+Portrait.propTypes = {
+  imageSizeInPx: PropTypes.number,
+};
+
+Portrait.defaultProps = {
+  imageSizeInPx: 100,
+};

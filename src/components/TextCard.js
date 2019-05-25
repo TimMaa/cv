@@ -1,11 +1,9 @@
 import React from 'react';
 
-function TextCard({ text }) {
+function TextCard({ text, className }) {
   return (
-    <div className="start-card" >
-      <div>
-        <h1>{text}</h1>
-      </div>
+    <div className={`${className} text-card`} >
+      <h1>{text}</h1>
       <svg xmlns="http://www.w3.org/2000/svg" display="none">
         <filter id="squiggle">
           <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" result="turbulence"> 

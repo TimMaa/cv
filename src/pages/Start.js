@@ -2,13 +2,12 @@ import React from 'react';
 
 import TextCard from '../components/TextCard';
 
-function MainInfo() {
+function Start() {
   return (
     <div className="start">
-      <div style={{ height: "100vh", width: "100vw" }}></div>
-      <TextCard text="What is in a CV?" />
+      <TextCard className="start-card" text="What is in a CV?" />
     </div>
   );
 }
 
-export default MainInfo;
+export default Start;

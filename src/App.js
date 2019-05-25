@@ -5,19 +5,20 @@ import './styles/App.scss';
 import MainInfo from './pages/MainInfo';
 import Start from './pages/Start';
 
+import FlyOutTransition from './transitions/FlyOutTransition'
+
 function App() {
 
-  let [ entered, setEntered ] = useState(false);
+  const [start, setStart] = useState(true);
 
   return (
-    <div className="App">
-      <div style={{ display: entered ? "none" : "block" }} onClick={() => setEntered(!entered)}>
-        <Start />
-      </div>
-      <div style={{ display: entered ? "block" : "none" }}>
-        <MainInfo />
-      </div>
-      <div class="copyright">by Tim Maaßen - 2019</div>
+    <div className="app">
+      <FlyOutTransition in={start}>
+        <div style={{ display: 'flex', justifyContent: 'center' }} onClick={() => setStart(!start)}>
+          <Start />
+        </div>
+      </FlyOutTransition>
+      <MainInfo />
     </div>
   );
 }

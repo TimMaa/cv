@@ -1,11 +1,13 @@
 @import 'palette.scss';
 
 // Component Styles
-@import 'components/StartCard';
 @import 'components/Portrait';
+@import 'components/TextCard';
 
 // Page Styles
 @import 'pages/MainInfo';
+@import 'pages/Start';
+
 
 body {
   background: url('data:image/svg+xml,\
@@ -14,6 +16,9 @@ body {
   </svg>\
   ') $dark 0 0 / 5em;
   color: $light;
+}
+
+.app {
 }
 
 code {
