@@ -5,7 +5,7 @@ import TextCard from '../components/TextCard';
 function Start() {
   return (
     <div className="start">
-      <TextCard className="start-card" text="What is in a CV?" />
+      <TextCard text="What's in a CV?" />
     </div>
   );
 }

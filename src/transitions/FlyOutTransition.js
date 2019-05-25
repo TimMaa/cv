@@ -30,11 +30,12 @@ export default function FlyOutTransition({ children, direction, in: inProp, time
 }
 
 FlyOutTransition.propTypes = {
-  direction: PropTypes.string.isRequired,
+  direction: PropTypes.string,
   in: PropTypes.bool.isRequired,
   timeout: PropTypes.number,
 };
 
 FlyOutTransition.defaultProps = {
+  direction: 'top',
   timeout: 300,
 };
