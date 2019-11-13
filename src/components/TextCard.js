@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 export default function TextCard({ text, className }) {
+
   return (
-    <div className={className ? `text-card ${className}` : 'text-card'} >
+    <div className={className ? `text-card ${className}` : 'text-card'}>
       <h1>{text}</h1>
       <svg xmlns="http://www.w3.org/2000/svg" display="none">
         <filter id="squiggle">

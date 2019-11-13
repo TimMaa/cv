@@ -8,12 +8,18 @@
   justify-content: center;
   align-items: center;
 
+  > .main-center {
+    z-index: 2;
+    user-select: none;
+  }
+
   .text-card {
     height: 400px;
     width: 400px;
     border-radius: 50%;
-
     background-color: $dark;
+
+    cursor: pointer;
   }
 
   .categories {
@@ -30,11 +36,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
-
+    
     > * {
       position: absolute;
     }
+  }
+
+  .category {
+    cursor: pointer;
   }
 
   .personal {
