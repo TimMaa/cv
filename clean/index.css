@@ -76,6 +76,7 @@ a > span.fab {
 
 .main > section {
   flex: 50%;
+  margin-bottom: 32px;
   /* border: 1px var(--dark) solid; */
 }
 
@@ -109,7 +110,7 @@ a > span.fab {
 .skill {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .skill > *:last-child {
@@ -124,6 +125,7 @@ a > span.fab {
   font-size: var(--large-font);
   font-weight: bold;
   margin-bottom: 8px;
+  margin-top: 16px;
 }
 
 .section-item .details {
@@ -161,4 +163,12 @@ a > span.fab {
   section > *:first-child {
     text-align: center;
   }
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary {
+  cursor: pointer;
 }
