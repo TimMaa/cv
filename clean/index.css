@@ -1,0 +1,156 @@
+:root {
+  --dark: rgba(30, 30, 36, 1);
+  --light: rgba(238, 238, 238, 1);
+  --icon-size: 32px;
+  --large-font: 20px;
+  --normal-font: 16px;
+  --small-font: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1160px;
+  line-height: 1.5;
+  color: var(--dark);
+  padding-top: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portrait {
+  width: 400px;
+  height: auto;
+  max-width: 50vw;
+  border-radius: 50%;
+}
+
+section {
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.personal-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-table > div {
+  flex: 50%;
+  padding: 8px;
+}
+
+.personal-table > div:nth-child(odd) {
+  text-align: right;
+}
+
+.find-me-table {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.find-me-table > div {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--icon-size);
+}
+
+a > span.fab {
+  color: var(--dark);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main > section {
+  flex: 50%;
+  /* border: 1px var(--dark) solid; */
+}
+
+.skill-section {
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-section > *:first-child {
+  font-size: var(--icon-size);
+  width: 40px;
+  margin-right: 16px;
+}
+
+.skills {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.skill {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.skill > *:last-child {
+  font-size: var(--small-font);
+}
+
+.professional-item {
+  margin-bottom: 16px;
+}
+
+.role {
+  font-size: var(--large-font);
+  font-weight: bold;
+}
+
+.professional-item > .details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.professional-item > .details > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.professional-item > .description > p {
+  margin: 4px 0;
+}
+
+.company {
+  font-size: var(--normal-font);
+  font-weight: lighter;
+}
+
+.description, .where, .when {
+  font-size: var(--small-font);
+}
+
+@media(max-width: 880px) {
+  .main > section {
+    flex: 100%;
+    margin: 32px 0;
+  }
+
+  section > *:first-child {
+    text-align: center;
+  }
+}
