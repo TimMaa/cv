@@ -17,7 +17,7 @@ body {
   max-width: 1160px;
   line-height: 1.5;
   color: var(--dark);
-  padding-top: 32px;
+  padding: 32px 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -79,9 +79,16 @@ a > span.fab {
   /* border: 1px var(--dark) solid; */
 }
 
-.skill-section {
-  margin: 32px 0;
+.skills-wrapper {
   display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.skill-section {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -89,49 +96,50 @@ a > span.fab {
 .skill-section > *:first-child {
   font-size: var(--icon-size);
   width: 40px;
-  margin-right: 16px;
+  margin-bottom: 16px;
 }
 
 .skills {
   display: flex;
   flex: 1;
-  justify-content: space-around;
+  flex-direction: column;
   text-align: center;
 }
 
 .skill {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .skill > *:last-child {
   font-size: var(--small-font);
 }
 
-.professional-item {
+.section-item {
   margin-bottom: 16px;
 }
 
-.role {
+.section-title {
   font-size: var(--large-font);
   font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.professional-item > .details {
+.section-item .details {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
-.professional-item > .details > div {
+.section-item .details > div {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
-.professional-item > .description > p {
+.section-item .description > p {
   margin: 4px 0;
 }
 
