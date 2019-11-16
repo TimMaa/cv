@@ -1,6 +1,6 @@
 :root {
   --dark: rgba(30, 30, 36, 1);
-  --light: rgba(238, 238, 238, 1);
+  --light: rgba(219, 219, 219, 1);
   --icon-size: 32px;
   --large-font: 20px;
   --normal-font: 16px;
@@ -113,10 +113,6 @@ a > span.fab {
   margin-bottom: 16px;
 }
 
-.skill > *:last-child {
-  font-size: var(--small-font);
-}
-
 .section-item {
   margin-bottom: 16px;
 }
@@ -131,7 +127,7 @@ a > span.fab {
 .section-item .details {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .section-item .details > div {
@@ -152,6 +148,10 @@ a > span.fab {
 
 .description, .where, .when {
   font-size: var(--small-font);
+}
+
+.description b {
+  font-size: 1.2em;
 }
 
 @media(max-width: 880px) {
