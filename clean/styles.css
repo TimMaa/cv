@@ -7,10 +7,6 @@
   --small-font: 12px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -47,6 +43,7 @@ section {
 .personal-table > div {
   flex: 50%;
   padding: 8px;
+  box-sizing: border-box;
 }
 
 .personal-table > div:nth-child(odd) {
@@ -55,7 +52,7 @@ section {
 
 .find-me-table {
   display: flex;
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 
 .find-me-table > div {
@@ -113,21 +110,33 @@ a > span.fab {
   margin-bottom: 16px;
 }
 
+.section-title {
+  font-size: var(--large-font);
+}
+
 .section-item {
   margin-bottom: 16px;
 }
 
-.section-title {
+.item-title {
   font-size: var(--large-font);
   font-weight: bold;
   margin-bottom: 8px;
   margin-top: 16px;
 }
 
+.expand-details {
+  text-align: center;
+  font-size: var(--large-font);
+}
+
+.section-item details {
+  margin-bottom: 24px;
+}
+
 .section-item .details {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
 }
 
 .section-item .details > div {
@@ -135,6 +144,10 @@ a > span.fab {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.section-item .description {
+  margin-top: 8px;
 }
 
 .section-item .description > p {
@@ -160,8 +173,20 @@ a > span.fab {
     margin: 32px 0;
   }
 
-  section > *:first-child {
+  .section-title {
     text-align: center;
+    margin-bottom: 8px;
+  }
+
+  summary {
+    position: relative;
+  }
+
+  summary > .expand-details {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2em;
   }
 }
 
