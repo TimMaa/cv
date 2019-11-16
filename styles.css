@@ -30,6 +30,10 @@ header {
   border-radius: 50%;
 }
 
+.icon {
+  font-size: var(--icon-size);
+}
+
 section {
   padding: 0 24px;
   box-sizing: border-box;
@@ -59,7 +63,6 @@ section {
   flex: 1;
   text-align: center;
   text-decoration: none;
-  font-size: var(--icon-size);
 }
 
 a > span.fab {
@@ -91,8 +94,7 @@ a > span.fab {
   align-items: center;
 }
 
-.skill-section > *:first-child {
-  font-size: var(--icon-size);
+.skill-section > span:first-child {
   width: 40px;
   margin-bottom: 16px;
 }
@@ -112,6 +114,7 @@ a > span.fab {
 
 .section-title {
   font-size: var(--large-font);
+  margin-bottom: 8px;
 }
 
 .section-item {
@@ -167,6 +170,26 @@ a > span.fab {
   font-size: 1.2em;
 }
 
+.other {
+  display: flex;
+}
+
+.other {
+  justify-content: space-around;
+}
+
+.activity-item > .icon {
+  margin-right: 8px;
+  width: 40px;
+  text-align: center;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
 @media(max-width: 880px) {
   .main > section {
     flex: 100%;
@@ -175,7 +198,6 @@ a > span.fab {
 
   .section-title {
     text-align: center;
-    margin-bottom: 8px;
   }
 
   summary {
@@ -188,6 +210,10 @@ a > span.fab {
     right: 0;
     font-size: 2em;
   }
+
+  .activity-group {
+    flex: 1;
+  }
 }
 
 summary::-webkit-details-marker {
@@ -196,4 +222,8 @@ summary::-webkit-details-marker {
 
 summary {
   cursor: pointer;
+}
+
+summary:focus {
+  outline: none;
 }
