@@ -1,4 +1,5 @@
-setupSkillLevels = () => {
+// Setup skill level dots
+(() => {
   const skillLevelContainerArray = document.getElementsByClassName('skill-level');
   const circleSize = 2;
   const circleOffset = (x) => 3 * x + 1;
@@ -16,6 +17,17 @@ setupSkillLevels = () => {
   for (let skillLevelContainer of skillLevelContainerArray) {
     skillLevelContainer.innerHTML = ratingSvg(skillLevelContainer.getAttribute('level'));
   };
-}
+})();
 
-setupSkillLevels();
+// Portrait Slideshow
+(() => {
+  const portraitContainer = document.getElementById('portrait');
+  let portraitIdx = 1;
+  const setPortrait = () => {
+    portraitContainer.setAttribute('src', `public/img/portrait${portraitIdx}.png`);
+    if (portraitIdx === 3) portraitIdx = 1;
+    else portraitIdx++;
+  };
+  setPortrait();
+  setInterval(setPortrait, 5000)
+})();
