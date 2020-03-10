@@ -17,10 +17,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-header {
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main > section {
+  flex: 50%;
+  max-width: 50%;
+  margin-bottom: 32px;
+}
+
+.title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .portrait {
@@ -37,6 +49,21 @@ header {
 section {
   padding: 0 24px;
   box-sizing: border-box;
+}
+
+.section-title {
+  font-size: var(--large-font);
+  margin-bottom: 8px;
+}
+
+.section-item {
+  margin-bottom: 16px;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .personal-table {
@@ -67,17 +94,6 @@ section {
 
 a > span.fab {
   color: var(--dark);
-}
-
-.main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.main > section {
-  flex: 50%;
-  margin-bottom: 32px;
-  /* border: 1px var(--dark) solid; */
 }
 
 .skills-wrapper {
@@ -112,13 +128,15 @@ a > span.fab {
   margin-bottom: 16px;
 }
 
-.section-title {
-  font-size: var(--large-font);
-  margin-bottom: 8px;
+.certificate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.section-item {
-  margin-bottom: 16px;
+.certificate-icon {
+  width: 40px;
+  margin-right: 8px;
 }
 
 .item-title {
@@ -193,7 +211,16 @@ a > span.fab {
 @media(max-width: 880px) {
   .main > section {
     flex: 100%;
+    max-width: 100%;
     margin: 32px 0;
+  }
+
+  .main > section.title {
+    margin: 0;
+  }
+
+  .main > section.personal {
+    margin-top: 0;
   }
 
   .section-title {
